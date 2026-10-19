@@ -1,0 +1,344 @@
+{
+  "name": "توپولوژی نمونه | دو رک و اتصال پورت‌ها",
+  "description": "Demonstration topology: two 12U racks, six devices and five port-to-port cables. All addresses, statuses and equipment are illustrative.",
+  "graph": {
+    "nodes": [
+      {
+        "id": "80d6fd52-4425-43ca-aa32-3589e7a931ce",
+        "kind": "text",
+        "type": "text",
+        "label": "توپولوژی نمونه | رک و اتصال تجهیزات",
+        "x": 750,
+        "y": -35,
+        "width": 1200,
+        "height": 52,
+        "parent": null,
+        "data": [],
+        "style": {
+          "color": "#e2e8f0",
+          "font_size": 22
+        }
+      },
+      {
+        "id": "dcf79a62-c1f9-4428-b89e-136203928d46",
+        "kind": "text",
+        "type": "text",
+        "label": "LAN: 10.20.10.0/24  |  Gateway: 10.20.10.1  |  VLAN 10",
+        "x": 750,
+        "y": 535,
+        "width": 1200,
+        "height": 52,
+        "parent": null,
+        "data": [],
+        "style": {
+          "color": "#67e8f9",
+          "font_size": 16
+        }
+      },
+      {
+        "id": "0e378d92-c949-46f7-845e-b153d9bb7ad6",
+        "kind": "text",
+        "type": "text",
+        "label": "نمونه نمایشی برای ارائه؛ تجهیزات، پورت‌ها و آدرس‌ها فرضی‌اند.",
+        "x": 750,
+        "y": 595,
+        "width": 1200,
+        "height": 52,
+        "parent": null,
+        "data": [],
+        "style": {
+          "color": "#94a3b8",
+          "font_size": 13
+        }
+      },
+      {
+        "id": "6e235216-aee9-443d-bf52-adbbebe9d469",
+        "kind": "device",
+        "type": "computer",
+        "label": "PC1 | Workstation",
+        "x": 1300,
+        "y": 364,
+        "width": 190,
+        "height": 86,
+        "parent": null,
+        "data": {
+          "status": "unknown",
+          "ip": "10.20.10.100",
+          "ports": 1,
+          "notes": "نمونه؛ eth0 به Gi1/0/1 سوییچ SW2. شبکه /24، دروازه 10.20.10.1.",
+          "tags": [
+            "نمونه ارائه"
+          ]
+        },
+        "style": {
+          "color": "#fbbf24"
+        }
+      },
+      {
+        "id": "a565be52-fc64-48a2-87fd-239179dd72e1",
+        "kind": "device",
+        "type": "firewall",
+        "label": "FW1 | Firewall",
+        "x": 264,
+        "y": 224,
+        "width": 282,
+        "height": 24,
+        "parent": "c7800385-f870-46fd-b746-ba00fde67af1",
+        "data": {
+          "status": "unknown",
+          "ip": "10.20.10.1",
+          "ports": 2,
+          "notes": "نمونه؛ wan1: 192.0.2.2/30 به روتر. lan1: 10.20.10.1/24 به سوییچ مرکزی، دروازه VLAN 10.",
+          "tags": [
+            "نمونه ارائه"
+          ],
+          "rack_u": 5,
+          "height_u": 1
+        },
+        "style": {
+          "color": "#fb923c"
+        }
+      },
+      {
+        "id": "a9e005df-f736-4a29-97ce-9035b7f65d5d",
+        "kind": "device",
+        "type": "server",
+        "label": "SRV1 | App Server",
+        "x": 864,
+        "y": 182,
+        "width": 282,
+        "height": 52,
+        "parent": "257a369d-2dc6-44bc-a3bf-01a6c8b5c1d1",
+        "data": {
+          "status": "unknown",
+          "ip": "10.20.10.10",
+          "ports": 2,
+          "notes": "نمونه؛ eno1 به Gi1/0/3 سوییچ SW1. شبکه /24، دروازه 10.20.10.1.",
+          "tags": [
+            "نمونه ارائه"
+          ],
+          "rack_u": 3,
+          "height_u": 2
+        },
+        "style": {
+          "color": "#34d399"
+        }
+      },
+      {
+        "id": "d761744c-0c90-4247-a4d5-1d8bbffe54f1",
+        "kind": "device",
+        "type": "switch",
+        "label": "SW2 | Access Switch",
+        "x": 864,
+        "y": 364,
+        "width": 282,
+        "height": 24,
+        "parent": "257a369d-2dc6-44bc-a3bf-01a6c8b5c1d1",
+        "data": {
+          "status": "unknown",
+          "ip": "10.20.10.3",
+          "ports": 24,
+          "notes": "نمونه؛ Gi1/0/24 آپ‌لینک به SW1 و Gi1/0/1 به PC1؛ پورت‌های این نمونه در VLAN 10.",
+          "tags": [
+            "نمونه ارائه"
+          ],
+          "rack_u": 10,
+          "height_u": 1
+        },
+        "style": {
+          "color": "#a78bfa"
+        }
+      },
+      {
+        "id": "de106cba-3253-4de5-8136-72e61b89c0d8",
+        "kind": "device",
+        "type": "switch",
+        "label": "SW1 | Core Switch",
+        "x": 264,
+        "y": 364,
+        "width": 282,
+        "height": 24,
+        "parent": "c7800385-f870-46fd-b746-ba00fde67af1",
+        "data": {
+          "status": "unknown",
+          "ip": "10.20.10.2",
+          "ports": 24,
+          "notes": "نمونه؛ Gi1/0/1 به فایروال، Gi1/0/2 به سوییچ دسترسی، Gi1/0/3 به سرور. آدرس مدیریتی در VLAN 10.",
+          "tags": [
+            "نمونه ارائه"
+          ],
+          "rack_u": 10,
+          "height_u": 1
+        },
+        "style": {
+          "color": "#22d3ee"
+        }
+      },
+      {
+        "id": "e9ceceff-d572-4667-baec-c410f5aa0f13",
+        "kind": "device",
+        "type": "router",
+        "label": "R1 | Edge Router",
+        "x": 264,
+        "y": 112,
+        "width": 282,
+        "height": 24,
+        "parent": "c7800385-f870-46fd-b746-ba00fde67af1",
+        "data": {
+          "status": "unknown",
+          "ip": "192.0.2.1",
+          "ports": 2,
+          "notes": "نمونه؛ Gi0/0 به wan1 فایروال، در شبکه 192.0.2.0/30.",
+          "tags": [
+            "نمونه ارائه"
+          ],
+          "rack_u": 1,
+          "height_u": 1
+        },
+        "style": {
+          "color": "#38bdf8"
+        }
+      },
+      {
+        "id": "c7800385-f870-46fd-b746-ba00fde67af1",
+        "kind": "rack",
+        "type": "rack",
+        "label": "Rack A | 12U",
+        "x": 250,
+        "y": 260,
+        "width": 340,
+        "height": 400,
+        "parent": null,
+        "data": {
+          "rack_units": 12
+        },
+        "style": {
+          "color": "#38bdf8",
+          "font_size": 16
+        }
+      },
+      {
+        "id": "257a369d-2dc6-44bc-a3bf-01a6c8b5c1d1",
+        "kind": "rack",
+        "type": "rack",
+        "label": "Rack B | 12U",
+        "x": 850,
+        "y": 260,
+        "width": 340,
+        "height": 400,
+        "parent": null,
+        "data": {
+          "rack_units": 12
+        },
+        "style": {
+          "color": "#a78bfa",
+          "font_size": 16
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "ceef9783-33f2-4d0b-9352-c72e8a34b89c",
+        "source": "e9ceceff-d572-4667-baec-c410f5aa0f13",
+        "target": "a565be52-fc64-48a2-87fd-239179dd72e1",
+        "type": "ethernet",
+        "label": "WAN",
+        "data": {
+          "source_port": "Gi0/0",
+          "target_port": "wan1",
+          "speed": "1 Gbps"
+        },
+        "style": {
+          "color": "#fb923c",
+          "line": "solid",
+          "width": 2,
+          "arrow": false
+        }
+      },
+      {
+        "id": "ab60e48c-d2a9-4103-be03-a2e27ae255ac",
+        "source": "a565be52-fc64-48a2-87fd-239179dd72e1",
+        "target": "de106cba-3253-4de5-8136-72e61b89c0d8",
+        "type": "ethernet",
+        "label": "LAN",
+        "data": {
+          "source_port": "lan1",
+          "target_port": "Gi1/0/1",
+          "speed": "1 Gbps",
+          "vlan": 10
+        },
+        "style": {
+          "color": "#38bdf8",
+          "line": "solid",
+          "width": 2,
+          "arrow": false
+        }
+      },
+      {
+        "id": "6b35df5e-4ba5-475e-8bae-af09041a74a1",
+        "source": "de106cba-3253-4de5-8136-72e61b89c0d8",
+        "target": "d761744c-0c90-4247-a4d5-1d8bbffe54f1",
+        "type": "ethernet",
+        "label": "LAN",
+        "data": {
+          "source_port": "Gi1/0/2",
+          "target_port": "Gi1/0/24",
+          "speed": "1 Gbps",
+          "vlan": 10
+        },
+        "style": {
+          "color": "#38bdf8",
+          "line": "solid",
+          "width": 2,
+          "arrow": false
+        }
+      },
+      {
+        "id": "3915e134-343a-413a-b0e8-43aeed7f8aa2",
+        "source": "de106cba-3253-4de5-8136-72e61b89c0d8",
+        "target": "a9e005df-f736-4a29-97ce-9035b7f65d5d",
+        "type": "ethernet",
+        "label": "LAN",
+        "data": {
+          "source_port": "Gi1/0/3",
+          "target_port": "eno1",
+          "speed": "1 Gbps",
+          "vlan": 10
+        },
+        "style": {
+          "color": "#38bdf8",
+          "line": "solid",
+          "width": 2,
+          "arrow": false
+        }
+      },
+      {
+        "id": "35d2df08-8965-4b28-a58d-0307fc300366",
+        "source": "d761744c-0c90-4247-a4d5-1d8bbffe54f1",
+        "target": "6e235216-aee9-443d-bf52-adbbebe9d469",
+        "type": "ethernet",
+        "label": "LAN",
+        "data": {
+          "source_port": "Gi1/0/1",
+          "target_port": "eth0",
+          "speed": "1 Gbps",
+          "vlan": 10
+        },
+        "style": {
+          "color": "#38bdf8",
+          "line": "solid",
+          "width": 2,
+          "arrow": false
+        }
+      }
+    ],
+    "settings": {
+      "theme": "dark",
+      "grid": false,
+      "snap": false,
+      "minimap": false
+    },
+    "viewport": {},
+    "revision": 0
+  }
+}
