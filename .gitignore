@@ -36,6 +36,8 @@ yarn-error.log
 /storage/browser-tools/
 /artifacts/
 /*.zip
+*.tar
+*.tar.gz
 /*.log
 *.pem
 *.p12

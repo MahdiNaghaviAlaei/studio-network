@@ -1,5 +1,7 @@
 # Filament Network Studio
 
+**اجرای آفلاین با Docker و `docker load`:** [راهنمای Docker](docker/README.md). بسته شامل یک کانتینر و SQLite است و روی سیستم مقصد به PHP یا Node.js نیاز ندارد. برای ساخت فایل انتقال از `export-docker.ps1` استفاده کنید.
+
 نمونه مدیریت و ترسیم توپولوژی شبکه در **Laravel 12 و Filament 3**، مناسب اجرای محلی و ارائه.
 بوم با Alpine و Cytoscape.js در همین پروژه اجرا می‌شود. نصب به Composer و npm و اینترنت یا مخزن بسته‌های سازمان نیاز دارد؛ اجرای پنل فقط PHP و دیتابیس می‌خواهد.
 
